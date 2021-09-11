@@ -51,7 +51,7 @@ a {
     }
   }
 
-  .opened {
+.opened {
     display: flex;
     animation: tooltip-opener 150ms;
 }
