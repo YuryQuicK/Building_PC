@@ -10,11 +10,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
     <header>
         <div class="page-header">
             <h1>Создай своего "монстра" в мире ПК</h1>
         </div>
     </header>
+
+    <div class="tooltip">
+        <div class="tooltip-body">
+            <span class="tooltip-text">Это popup. Всплывающее окно.</span>
+            <button class="close-button" type="button"><span>Закрыть</span></button>
+        </div>
+    </div>
 
     <section class="categories">
         <div class="category">
@@ -57,16 +65,17 @@
         </div>
         <div class="category">
             <a href="#">
-                <img src="img/SSD.jpg">
-                <p><h2>SSD накопители</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
                 <img src="img/Coolers.jpg">
                 <p><h2>Охлаждение компьютера</h2></p>
             </a>
         </div>
+        <div class="category">
+            <a href="#">
+                <img src="img/SSD.jpg">
+                <p><h2>SSD накопители</h2></p>
+            </a>
+        </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
