@@ -16,65 +16,70 @@
         </div>
     </header>
 
-    <div class="tooltip">
-        <div class="tooltip-body">
-            <span class="tooltip-text">Это popup. Всплывающее окно.</span>
-            <button class="close-button" type="button"><span>Закрыть</span></button>
-        </div>
-    </div>
+	<form action="./index2" method="POST">
+		<div class="tooltip {{className}}">
+			<div class="tooltip-body">
+				<span class="tooltip-text">Это popup. Всплывающее окно.</span>
+				<input class="close-button" type="submit" value="Закрыть">
+			</div>
+		</div>
+	</form>
 
-    <section class="categories">
-        <div class="category">
-            <a href="#">
-                <img src="img/processors.jpg">
-                <p><h2>Процессоры</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
-                <img src="img/motherboards.jpg">
-                <p><h2>Материнские платы</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
-                <img src="img/graphicsCard.jpg">
-                <p><h2>Видеокарты</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
-                <img src="img/memory.jpg">
-                <p><h2>Оперативная память</h2></p>
-            </a>
-        </div>
-        </section>
-        <section class="categories">
-        <div class="category">
-            <a href="#">
-                <img src="img/Case.jpg">
-                <p><h2>Корпуса</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
-                <img src="img/powerSupply.jpg">
-                <p><h2>Блоки питания</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
-                <img src="img/Coolers.jpg">
-                <p><h2>Охлаждение компьютера</h2></p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="#">
-                <img src="img/SSD.jpg">
-                <p><h2>SSD накопители</h2></p>
-            </a>
-        </div>
-    </section>
+	<form action="./index1" method="POST">
+		<input type="hidden" name="className" value="opened">
+		<section class="categories">
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/processors.jpg">
+					<p><h2>Процессоры</h2></p>
+				</a>
+			</div>
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/motherboards.jpg">
+					<p><h2>Материнские платы</h2></p>
+				</a>
+			</div>
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/graphicsCard.jpg">
+					<p><h2>Видеокарты</h2></p>
+				</a>
+			</div>
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/memory.jpg">
+					<p><h2>Оперативная память</h2></p>
+				</a>
+			</div>
+			</section>
+			<section class="categories">
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/Case.jpg">
+					<p><h2>Корпуса</h2></p>
+				</a>
+			</div>
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/powerSupply.jpg">
+					<p><h2>Блоки питания</h2></p>
+				</a>
+			</div>
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/Coolers.jpg">
+					<p><h2>Охлаждение компьютера</h2></p>
+				</a>
+			</div>
+			<div class="category">
+				<a href="#">
+					<input type="image" src="img/SSD.jpg">
+					<p><h2>SSD накопители</h2></p>
+				</a>
+			</div>
+		</section>
+	</form>
     <script src="script.js"></script>
 </body>
 </html>
