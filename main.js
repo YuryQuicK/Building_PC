@@ -32,6 +32,13 @@ http.createServer(function(request, response){
 				response.end(mustache.render(data, view));
 			});
 		})
+	} else if (request.url == '/data') {
+		var object = {
+			'FirstValue': 0,
+			'SecondValue': 1000
+		};
+		response.writeHead(200);
+		response.end(JSON.stringify(object));
 	} else {
 		fs.readFile(__dirname + request.url, function (err,data) {
 			if (err) {
