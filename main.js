@@ -7,15 +7,20 @@ http.createServer(function(request, response){
 		var view = {
 			className: ''
 		}
+		var viewVariables = {
+					firstValue: -1,
+					secondValue: 1
+				};
 		var data = fs.readFileSync(__dirname + '\\index.html', 'utf8');
 		response.writeHead(200);
+		data = mustache.render(data, viewVariables);
 		response.end(mustache.render(data, view));
 	} else if(request.url == '/index1') {
 		let data = '';
 		let newData = '';
 		request.on('data', chunk => {
 			data += chunk;
-		})
+		});
 		request.on('end', () => {
 			newData = data.substr(10, 6)
 			fs.readFile(__dirname + '\\index.html', function (err,data) {
@@ -27,15 +32,20 @@ http.createServer(function(request, response){
 				var view = {
 					className: newData
 				}
+				var viewVariables = {
+					firstValue: -1,
+					secondValue: 1
+				};
 				var data = fs.readFileSync(__dirname + '\\index.html', 'utf8');
 				response.writeHead(200);
+				data = mustache.render(data, viewVariables);
 				response.end(mustache.render(data, view));
 			});
 		})
 	} else if (request.url == '/data') {
 		var object = {
-			'FirstValue': 0,
-			'SecondValue': 1000
+			FirstValue: 0,
+			SecondValue: 10
 		};
 		response.writeHead(200);
 		response.end(JSON.stringify(object));
