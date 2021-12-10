@@ -36,8 +36,6 @@ var RangeSlider = function(el) {
     this.update = function() {
         var rangeValue1 = parseFloat(this.range1.value);
         var rangeValue2 = parseFloat(this.range2.value);
-      
-      console.log(rangeValue1, rangeValue2);
 
         if (rangeValue1 > rangeValue2) {
             var tmp = rangeValue2;
