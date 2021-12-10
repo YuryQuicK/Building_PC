@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building PC</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic">
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-        <div class="page-header">
-            <h1>Создай своего "монстра" в мире ПК</h1>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Building PC</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic">
+		<link href="style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<header>
+			<div class="page-header">
+				<h1>Создай своего "монстра" в мире ПК</h1>
+			</div>
+		</header>
 
-	<form action="./index2" method="POST">
-		<div class="tooltip {{className}}">
-			<div class="tooltip-body">
-				<span class="tooltip-text">Это popup. Всплывающее окно.</span>
-				<input class="close-button" type="submit" value="Закрыть">
+		<form action="./index2" method="POST">
+			<div class="tooltip {{className}}">
+				<div class="tooltip-body">
+					<span class="tooltip-text">Это popup. Всплывающее окно.</span>
+					<input class="close-button" type="submit" value="Закрыть">
+				</div>
 			</div>
-		</div>
-	</form>
+		</form>
 
-	<form action="./index1" method="POST">
-		<input type="hidden" name="className" value="opened">
-		<section class="categories">
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/processors.jpg">
-					<p><h2>Процессоры</h2></p>
-				</a>
-			</div>
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/motherboards.jpg">
-					<p><h2>Материнские платы</h2></p>
-				</a>
-			</div>
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/graphicsCard.jpg">
-					<p><h2>Видеокарты</h2></p>
-				</a>
-			</div>
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/memory.jpg">
-					<p><h2>Оперативная память</h2></p>
-				</a>
-			</div>
-			</section>
+		<form action="./index1" method="POST">
+			<input type="hidden" name="className" value="opened">
 			<section class="categories">
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/Case.jpg">
-					<p><h2>Корпуса</h2></p>
-				</a>
-			</div>
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/powerSupply.jpg">
-					<p><h2>Блоки питания</h2></p>
-				</a>
-			</div>
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/Coolers.jpg">
-					<p><h2>Охлаждение компьютера</h2></p>
-				</a>
-			</div>
-			<div class="category">
-				<a href="#">
-					<input type="image" src="img/SSD.jpg">
-					<p><h2>SSD накопители</h2></p>
-				</a>
-			</div>
-		</section>
-	</form>
-    <script src="script.js"></script>
-</body>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/processors.jpg">
+						<p><h2>Процессоры</h2></p>
+					</a>
+				</div>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/motherboards.jpg">
+						<p><h2>Материнские платы</h2></p>
+					</a>
+				</div>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/graphicsCard.jpg">
+						<p><h2>Видеокарты</h2></p>
+					</a>
+				</div>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/memory.jpg">
+						<p><h2>Оперативная память</h2></p>
+					</a>
+				</div>
+				</section>
+				<section class="categories">
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/Case.jpg">
+						<p><h2>Корпуса</h2></p>
+					</a>
+				</div>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/powerSupply.jpg">
+						<p><h2>Блоки питания</h2></p>
+					</a>
+				</div>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/Coolers.jpg">
+						<p><h2>Охлаждение компьютера</h2></p>
+					</a>
+				</div>
+				<div class="category">
+					<a href="#">
+						<input type="image" src="img/SSD.jpg">
+						<p><h2>SSD накопители</h2></p>
+					</a>
+				</div>
+			</section>
+		</form>
+		<br>
+		<div class="double-range">
+			<span class="double-range__value"></span>
+			<div class="double-range__bar"></div>
+			<input type="range" class="double-range__range"/>
+			<input type="range" class="double-range__thumb" value="{{firstValue}}" min="{{firstValue}}" max="{{secondValue}}" step="1"/>
+			<input type="range" class="double-range__thumb" value="{{secondValue}}" min="{{firstValue}}" max="{{secondValue}}" step="1"/>
+		</div>
+		<button class="sendValue">Отправить</button>
+		<script src="script.js"></script>
+	</body>
 </html>
