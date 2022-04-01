@@ -1,38 +1,9 @@
 import java.util.Scanner;
-
-class detail {
-    private String name;
-    private int price;
-    public boolean isChosen;
-
-    public detail() {
-        name = "";
-        price = 0;
-        isChosen = false;
-    }
-
-    public detail(String name, int price) {
-        this.name = name;
-        this.price = price;
-        isChosen = false;
-    }
-
-    public void setDetail(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    public void showDetail() {
-        System.out.println(name + "\tЦена:" + price + " рублей");
-    }
-
-    public int getPrice() {
-        return price;
-    }
-}
+import java.util.stream.*;
+import java.util.Arrays;
 
 public class PC {
-    detail[] details;
+    Detail[] details;
     public static void main(String[] args) {
         int n = 5;
         PC pc = new PC();
@@ -48,7 +19,7 @@ public class PC {
                     pc.showChoosen(pc.details);
                     break;
                 case 2:
-                    pc.chooseCategory(pc.details, console);
+                    pc.addCategory(pc.details, console);
                     break;
                 case 3:
                     pc.deleteCategory(pc.details, console);
@@ -64,18 +35,18 @@ public class PC {
     }
 
     PC () {
-        details = new detail[8];
-        details[0] = new detail(new String("Процессор: i5-3770K"), 5000);
-        details[1] = new detail(new String("Материнская плата: Asus Z77-A"), 8000);
-        details[2] = new detail(new String("Видеокарта: GeForce GTX 1060 G1 Gaming 6GB"), 16000);
-        details[3] = new detail(new String("Оперативная память: Crucial Balistix 8 GB"), 6000);
-        details[4] = new detail(new String("Корпус: DEEPCOOLMATREXX 30"), 2800);
-        details[5] = new detail(new String("Блок питания: POWERMAN 450W"), 3000);
-        details[6] = new detail(new String("Охлаждение компьютера: DEEPCOOL GAMMAX 400"), 2500);
-        details[7] = new detail(new String("HDD диск/SSD накопитель: WD BLUE 1TB"), 3500);
+        details = new Detail[8];
+        details[0] = new Detail(new String("Процессор: i5-3770K"), 5000);
+        details[1] = new Detail(new String("Материнская плата: Asus Z77-A"), 8000);
+        details[2] = new Detail(new String("Видеокарта: GeForce GTX 1060 G1 Gaming 6GB"), 16000);
+        details[3] = new Detail(new String("Оперативная память: Crucial Balistix 8 GB"), 6000);
+        details[4] = new Detail(new String("Корпус: DEEPCOOLMATREXX 30"), 2800);
+        details[5] = new Detail(new String("Блок питания: POWERMAN 450W"), 3000);
+        details[6] = new Detail(new String("Охлаждение компьютера: DEEPCOOL GAMMAX 400"), 2500);
+        details[7] = new Detail(new String("HDD диск/SSD накопитель: WD BLUE 1TB"), 3500);
     }
 
-    public void showChoosen(detail[] details) {
+    public void showChoosen(Detail[] details) {
         System.out.println("Выбраны следующие категории: ");
         int count = 0;
 
@@ -90,7 +61,7 @@ public class PC {
         System.out.println("");
     }
 
-    public void chooseCategory(detail[] details, Scanner console) {
+    public void addCategory(Detail[] details, Scanner console) {
         int detailsNumber = details.length;
         int catergory = detailsNumber + 1;
         do {
@@ -110,7 +81,7 @@ public class PC {
         } while (catergory != detailsNumber + 1);
     }
 
-    public void deleteCategory(detail[] details, Scanner console) {
+    public void deleteCategory(Detail[] details, Scanner console) {
         int detailsNumber = details.length;
         int catergory = detailsNumber + 1;
         int count = 0;
@@ -144,33 +115,34 @@ public class PC {
         } while (catergory != count + 1);
     }
 
-    private void quickSort(detail[] details, int leftBorder, int rightBorder) {
-        detail pivot = details[leftBorder];
-        int l = leftBorder, r = rightBorder;
+    // private void quickSort(Detail[] details, int leftBorder, int rightBorder) {
+    //     Detail pivot = details[leftBorder];
+    //     int l = leftBorder, r = rightBorder;
 
-	for (; r >= l; r--) {
-		if (pivot.getPrice() >= details[r].getPrice()) {
-			details[l] = details[r];
-			details[r] = pivot;
-			l++;
-			for (; r >= l; l++) {
-				if (details[l].getPrice() >= pivot.getPrice()) {
-					details[r] = details[l];
-					details[l] = pivot;
-					break;
-				}
-			}
-		}
-	}
-	if (r >= leftBorder) {
-		quickSort(details, leftBorder, r);
-	}
-	if (l <= rightBorder) {
-		quickSort(details, l, rightBorder);
-	}
-    }
+	// for (; r >= l; r--) {
+	// 	if (pivot.getPrice() >= details[r].getPrice()) {
+	// 		details[l] = details[r];
+	// 		details[r] = pivot;
+	// 		l++;
+	// 		for (; r >= l; l++) {
+	// 			if (details[l].getPrice() >= pivot.getPrice()) {
+	// 				details[r] = details[l];
+	// 				details[l] = pivot;
+	// 				break;
+	// 			}
+	// 		}
+	// 	}
+	// }
+    //     if (r >= leftBorder) {
+    //         quickSort(details, leftBorder, r);
+    //     }
+    //     if (l <= rightBorder) {
+    //         quickSort(details, l, rightBorder);
+    //     }
+    // }
 
-    public void sortDetails(detail[] details) {
-        quickSort(details, 0, details.length - 1);
+    public void sortDetails(Detail[] details) {
+        //quickSort(details, 0, details.length - 1);
+        details = Arrays.stream(details).sorted((o1, o2) -> o1.getPrice() - o2.getPrice()).collect(Collectors.toList()).toArray(details);
     }
 }
