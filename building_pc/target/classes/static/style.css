@@ -1,0 +1,70 @@
+body {
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    background-color: rgb(56, 0, 109);
+}
+
+.page-header {
+    padding: 16px;
+    color: rgb(243, 77, 0);
+    text-align: center;
+    background-color: rgb(9, 0, 49);
+}
+
+.categories {
+    display: flex;
+    margin-right: 5px;
+    margin-left: 5px;
+    justify-content: center;
+}
+
+a {
+    color:orange;
+    text-decoration: none;
+}
+
+.category {
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    text-align: center;
+    margin: 15px 15px 10px 15px;
+}
+
+.tooltip {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0%;
+    left: 0%;
+    animation: tooltip-opener 150ms;
+}
+
+@keyframes tooltip-opener {
+    0% {
+      transform: translate(50%) scaleX(0);
+    }
+  
+    100% {
+      transform: translate(100%) scaleX(100%);
+    }
+  }
+
+.closed {
+    display: none;
+}
+
+.tooltip-body {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-text {
+    background-color: rgb(19, 0, 0);
+    max-width: 800px;
+    color: white;
+}
